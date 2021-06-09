@@ -9,7 +9,7 @@ const displayMessage = function (message) {
 
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
-  if (!guess) {
+  if (!guess && guess > 20) {
     // document.querySelector('.message').textContent = '🔴 No number entered...';
     displayMessage('🔴 No number entered...');
   } else if (guess === secretNumber) {
